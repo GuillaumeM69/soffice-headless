@@ -10,7 +10,7 @@ After=syslog.target
 
 [Service]
 ExecStart=/usr/bin/soffice --headless '--accept=socket,host=127.0.0.1,port=8100;urp'
-Restart=always
+Restart=on-failure
 KillSignal=SIGQUIT
 StandardError=syslog
 #User=csadmin
